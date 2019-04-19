@@ -1,0 +1,66 @@
+body{
+  min-height: 100vh;
+  display: flex;
+  background-color: pink;
+  flex-direction: column;
+}
+
+div.topGradientDiv{
+  display: flex;
+  height: 60vh;
+  background-image: linear-gradient(to bottom, rgb(73, 138, 220), rgb(98, 59, 156));
+
+  flex-direction: row;
+
+}
+
+
+div.bottomWhiteDiv{
+  height: 40vh;
+  background-color: white;
+
+}
+
+div.borderC{
+  border: 1px solid #000;
+}
+
+
+div.gradientLeft{
+
+  flex: 5 1 auto;
+  padding: 30px;
+}
+
+div.gradientRight{
+  background-color: blue;
+  flex: 5 0 auto;
+}
+
+div.headings{
+  display: flex;
+  flex-direction: column;
+  font-family: 'IBM Plex Sans', sans-serif;
+
+}
+
+#header{
+  font-size: 5vw;
+  color: white;
+}
+
+#subheader{
+  font-size: 4vw;
+  color: purple;
+}
+
+div.forecastBox{
+  display: flex;
+  flex-direction: row;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: white;
+
+}
+input{
+  font-family: 'IBM Plex Sans', sans-serif;
+}
