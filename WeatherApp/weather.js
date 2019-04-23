@@ -1,6 +1,5 @@
 "strict mode";
 
-// Do a CORS request to get Davis weather hourly forecast
 
 // Create the XHR object.
 function createCORSRequest(method, url) {
@@ -12,7 +11,7 @@ function createCORSRequest(method, url) {
 // Make the actual CORS request.
 function makeCorsRequest() {
 
-   let url = "http://api.openweathermap.org/data/2.5/forecast/hourly?q=Davis,CA,US&units=imperial&APPID=53c8645907d8866df3b9537d722afba2"
+   let url = "http://api.openweathermap.org/data/2.5/forecast/hourly?q=sacramento,CA,US&units=imperial&APPID=53c8645907d8866df3b9537d722afba2"
 
   let xhr = createCORSRequest('GET', url);
 
@@ -27,7 +26,9 @@ function makeCorsRequest() {
       let responseStr = xhr.responseText;  // get the JSON string
       let object = JSON.parse(responseStr);  // turn it into an object
       console.log(JSON.stringify(object, undefined, 2));  // print it out as a string, nicely formatted
-    
+      console.log("HeLooO!!");
+      console.log(object.cnt);
+
   };
 
   xhr.onerror = function() {

@@ -1,0 +1,183 @@
+body{
+  min-height: 100vh;
+  display: flex;
+  background-color: pink;
+  flex-direction: column;
+}
+
+div.topGradientDiv{
+  display: flex;
+  flex-direction: row;
+  height: 60vh;
+  background-image: linear-gradient(to bottom, rgb(73, 138, 220), rgb(98, 59, 156));
+  justify-content: space-around;
+  align-items: stretch;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  filter: drop-shadow(0px 0px 30px);
+
+}
+
+div.bottomWhiteDiv{
+  height: 40vh;
+  background-color: white;
+
+}
+
+div.borderC{
+  /*border: 1px solid #000;*/
+}
+
+div.gradientLeft{
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+
+}
+
+div.gradientRight{
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+div.headings{
+  display: flex;
+  flex-direction: column;
+  font-family: 'IBM Plex Sans', sans-serif;
+
+}
+
+#header{
+  font-size: 3em;
+  color: white;
+
+
+}
+
+#subheader{
+  font-size: 2em;
+  color: purple;
+  color: #2e3192;
+
+  padding: 20px 0px;
+}
+
+div.forecastBox{
+  display: flex;
+  flex-direction: row;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: white;
+  font-size: 1em;
+  align-items: stretch;
+
+}
+
+div.forecastCap{
+  margin-right: 10px;
+  text-align: center;
+  padding: 10px 0px;
+
+}
+
+input[type=text] {
+
+  padding: 0px 20px;
+  width: 17vw;
+  border: none;
+  background-color: #2D3290;
+  color: white;
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin-right: 10px;
+  font-size: 1em;
+
+
+}
+
+input[type=submit] {
+
+  padding: 0px 20px;
+  box-sizing: border-box;
+  border: none;
+  background-color: #7E8BCA;
+  color: white;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1em;
+
+
+}
+
+
+div.weatherRN-Box{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+div.sairaFont{
+  font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+div.currentTime{
+  font-size: 2em;
+  color: white;
+  margin-right: 20px;
+  margin-left: 5vw;
+
+}
+
+div.currentTemp{
+  font-family: 'Saira Extra Condensed', sans-serif;
+  color: white;
+  font-size: 4em;
+  padding-left: 20px;
+}
+
+img.leftImage{
+  width: 10vw;
+}
+
+img.rightImage{
+  width: 25vw;
+  margin-right: 6vw;
+}
+
+img.bottomImages{
+  width: 8vw;
+
+}
+
+div.bottomWhiteDiv{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  align-content: stretch;
+
+
+
+}
+
+div.oneOfFive{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1 1 auto;
+
+}
+
+div.time{
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 1.5em;
+}
+
+div.temperature{
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-size: 4em;
+}

@@ -1,26 +1,29 @@
 <!--
 Collects 10 most recent doppler radar files
 -->
-
+<!-- API KEY: 53c8645907d8866df3b9537d722afba2-->
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Collect past dopper</title>
+	title>Exhibit</title>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,500" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="exhibit.css">
 </head>
 
 <body>
 <p>
 The Javascript attached to this page collects the 10 most recent doppler image overlays
-from the National Weather Service.  We'll discuss it as an example in class on Friday, probably. 
+from the National Weather Service.  We'll discuss it as an example in class on Friday, probably.
 </p>
 <p>
-In the process, it tries a lot of possible file names that generate "404 Not Found" responses from the 
-server, indicating that the image we are asking for is not found. 
+In the process, it tries a lot of possible file names that generate "404 Not Found" responses from the
+server, indicating that the image we are asking for is not found.
 To block those out of your Javascript console, you can click on the gear icon on the far right and select "Hide network".
 </p>
 
-<!-- execute the Javascript for this page --> 
+<!-- execute the Javascript for this page -->
 <script src="collectPastDoppler.js"></script>
 
 
