@@ -15,35 +15,36 @@
     <div class="topGradientDiv borderC">
       <div class="gradientLeft borderC">
         <div class="headings">
-          <div id="header">
+          <div class="borderC" id="header">
             Local Weather Six Hour Forecast
 
           </div>
-          <div id="subheader">
+          <div class="borderC"id="subheader">
             Northern California with doppler radar
           </div>
         </div>
 
       <div class="forecastBox borderC">
-        <div class="forecastCap">
+        <div class="forecastCap borderC">
           Forecast for
         </div>
-        <input type="text" name="city" value="">
 
-        <input type="submit" value="Submit">
+        <input id="typeInBox" type="text" name="city" value="Davis">
+
+        <input id="submitBox" type="submit" value="submit">
 
       </div>
 
-      <div class="weatherRN-Box">
+      <div class="weatherRN-Box borderC">
 
-        <div class="currentTime">
+        <div class="currentTime sairaFont borderC">
           current <br> 12pm
         </div>
 
-        <img src="assets/rain-day.svg" alt="rainday">
+        <img class="leftImage borderC" src="assets/rain-day.svg" alt="rainday">
 
-        <div class="currentTemp">
-          67
+        <div class="currentTemp borderC sairaFont">
+          67°
         </div>
 
 
@@ -53,13 +54,65 @@
 
       </div>
 
-      <div class="gradientRight borderC">
-        hi
-      </div>
+
+        <img class= "rightImage" src="assets/clear-night.svg" alt="rainday">
+
 
     </div>
     <div class="bottomWhiteDiv borderC">
+      <div class="oneOfFive borderC">
+        <div class="time">
+          1:00 pm
+        </div>
+        <img class= "bottomImages" src="assets/clear-night.svg" alt="rainday">
+        <div class="temperature">
+          68°
+        </div>
+      </div>
+
+      <div class="oneOfFive">
+        <div class="time">
+          1:00 pm
+        </div>
+        <img class= "bottomImages" src="assets/clear-night.svg" alt="rainday">
+        <div class="temperature">
+          68°
+        </div>
+      </div>
+
+      <div class="oneOfFive">
+        <div class="time">
+          1:00 pm
+        </div>
+        <img class= "bottomImages" src="assets/clear-night.svg" alt="rainday">
+        <div class="temperature">
+          68°
+        </div>
+      </div>
+
+      <div class="oneOfFive">
+        <div class="time">
+          1:00 pm
+        </div>
+        <img class= "bottomImages" src="assets/clear-night.svg" alt="rainday">
+        <div class="temperature">
+          68°
+        </div>
+      </div>
+
+      <div class="oneOfFive">
+        <div class="time">
+          1:00 pm
+        </div>
+        <img class= "bottomImages" src="assets/clear-night.svg" alt="rainday">
+        <div class="temperature">
+          68°
+        </div>
+      </div>
+
 
     </div>
+
+    <script src="weather.js"></script>
   </body>
 </html>
