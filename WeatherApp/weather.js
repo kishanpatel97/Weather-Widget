@@ -11,7 +11,7 @@ function createCORSRequest(method, url) {
 // Make the actual CORS request.
 function makeCorsRequest() {
 
-   let url = "http://api.openweathermap.org/data/2.5/forecast/hourly?q=sacramento,CA,US&units=imperial&APPID=53c8645907d8866df3b9537d722afba2"
+  let url = "http://api.openweathermap.org/data/2.5/forecast/hourly?q=sacramento,CA,US&units=imperial&APPID=53c8645907d8866df3b9537d722afba2"
 
   let xhr = createCORSRequest('GET', url);
 
@@ -22,44 +22,44 @@ function makeCorsRequest() {
   }
 
   // Load some functions into response handlers.
-  xhr.onload = function() {
-      let responseStr = xhr.responseText;  // get the JSON string
-      let object = JSON.parse(responseStr);  // turn it into an object
-      console.log(JSON.stringify(object, undefined, 2));  // print it out as a string, nicely formatted
-      console.log("HeLooO!!");
-      console.log(object.cnt);
+  xhr.onload = function () {
+    let responseStr = xhr.responseText;  // get the JSON string
+    let object = JSON.parse(responseStr);  // turn it into an object
+    console.log(JSON.stringify(object, undefined, 2));  // print it out as a string, nicely formatted
+    console.log("HeLooO!!");
+    console.log(object.cnt);
 
 
-  var timeElements = document.getElementsByClassName("time");
-  var tempElements = document.getElementsByClassName("temperature");
+    var timeElements = document.getElementsByClassName("time");
+    var tempElements = document.getElementsByClassName("temperature");
 
 
-      for(i = 0; i < 5; i++){
-        var d = new Date(object.list[i].dt * 1000);
+    for (i = 0; i < 5; i++) {
+      var d = new Date(object.list[i].dt * 1000);
 
-        var hour = d.getHours();
-        console.log("Time :" + hour);
+      var hour = d.getHours();
+      console.log("Time :" + hour);
 
-        var ending = ":00 am";
-        if(hour >= 12){
-          ending = ":00 pm";
-        }
-        if(hour > 12){
-
-          hour = hour - 12;
-        }
-
-        if(hour == 0){
-          hour = 12;
-        }
-
-        var temp = object.list[i].main.temp;
-        tempElements[i].innerHTML = Math.floor(temp) + "°";
-
-
-        timeElements[i].innerHTML = hour + ending;
-
+      var ending = ":00 am";
+      if (hour >= 12) {
+        ending = ":00 pm";
       }
+      if (hour > 12) {
+
+        hour = hour - 12;
+      }
+
+      if (hour == 0) {
+        hour = 12;
+      }
+
+      var temp = object.list[i].main.temp;
+      tempElements[i].innerHTML = Math.floor(temp) + "°";
+
+
+      timeElements[i].innerHTML = hour + ending;
+
+    }
   };
 
 
