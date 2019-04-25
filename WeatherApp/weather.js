@@ -29,7 +29,40 @@ function makeCorsRequest() {
       console.log("HeLooO!!");
       console.log(object.cnt);
 
+
+  var timeElements = document.getElementsByClassName("time");
+  var tempElements = document.getElementsByClassName("temperature");
+
+
+      for(i = 0; i < 5; i++){
+        var d = new Date(object.list[i].dt * 1000);
+
+        var hour = d.getHours();
+        console.log("Time :" + hour);
+
+        var ending = ":00 am";
+        if(hour >= 12){
+          ending = ":00 pm";
+        }
+        if(hour > 12){
+
+          hour = hour - 12;
+        }
+
+        if(hour == 0){
+          hour = 12;
+        }
+
+        var temp = object.list[i].main.temp;
+        tempElements[i].innerHTML = Math.floor(temp) + "°";
+
+
+        timeElements[i].innerHTML = hour + ending;
+
+      }
   };
+
+
 
   xhr.onerror = function() {
     alert('Woops, there was an error making the request.');
