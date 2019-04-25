@@ -1,5 +1,6 @@
 "strict mode";
 
+
 // Create the XHR object.
 function createCORSRequest(method, url) {
   let xhr = new XMLHttpRequest();
@@ -24,8 +25,44 @@ function makeCorsRequest() {
   xhr.onload = function () {
     let responseStr = xhr.responseText;  // get the JSON string
     let object = JSON.parse(responseStr);  // turn it into an object
-    let data = grabData(object.list);
+    console.log(JSON.stringify(object, undefined, 2));  // print it out as a string, nicely formatted
+    console.log("HeLooO!!");
+    console.log(object.cnt);
+
+
+    var timeElements = document.getElementsByClassName("time");
+    var tempElements = document.getElementsByClassName("temperature");
+
+
+    for (i = 0; i < 5; i++) {
+      var d = new Date(object.list[i].dt * 1000);
+
+      var hour = d.getHours();
+      console.log("Time :" + hour);
+
+      var ending = ":00 am";
+      if (hour >= 12) {
+        ending = ":00 pm";
+      }
+      if (hour > 12) {
+
+        hour = hour - 12;
+      }
+
+      if (hour == 0) {
+        hour = 12;
+      }
+
+      var temp = object.list[i].main.temp;
+      tempElements[i].innerHTML = Math.floor(temp) + "°";
+
+
+      timeElements[i].innerHTML = hour + ending;
+
+    }
   };
+
+
 
   xhr.onerror = function () {
     alert('Woops, there was an error making the request.');
@@ -34,21 +71,6 @@ function makeCorsRequest() {
   // Actually send request to server
   xhr.send();
 }
-
-function grabData(list) {
-  let ret = [];
-  let times = document.getElementsByClassName("time");
-  let temps = document.getElementsByClassName("temperature");
-  console.log(list);
-  for(let i = 0; i < 6; i++) {
-    times[i].innerHTML = new Date(list[i].dt_txt).getHours() + ":00";
-    temps[i].innerHTML = Math.floor(list[i].main.temp) + "°";
-  }
-}
-
-document.getElementById("submitBox").addEventListener(function() {
-  grabData();
-})
 
 // run this code to make request when this script file gets executed
 makeCorsRequest();
