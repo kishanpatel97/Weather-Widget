@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <div class="topGradientDiv borderC">
+    <div class="topGradientDiv borderC" id="topGradDiv">
       <div class="gradientLeft borderC">
         <div class="headings">
           <div class="borderC" id="header">Local Weather Six Hour Forecast</div>
@@ -28,63 +28,88 @@
         </div>
 
         <div class="forecastBox borderC">
-          <div class="forecastCap borderC">Forecast for</div>
+          <div class="forecastCap borderC" >Forecast for</div>
 
-          <input id="typeInBox" type="text" name="city" value="Davis, CA" />
+          <input id="typeInBox" type="text" name="city" value="Davis" />
 
           <input id="submitBox" type="submit" value="submit" />
         </div>
 
         <div class="weatherRN-Box borderC">
-          <div class="currentTime sairaFont borderC">
-            current <br />
-            12pm
+          <div class="leftPart borderC">
+            <div class="currentTime sairaFont borderC" id="currTime">
+              current <br />
+              12pm
+            </div>
+
+            <br>
+
+            <img class="leftImage borderC" id="leftImage" src="assets/rain-day.svg"
+              alt="weatherImage" />
+
+            <div class="currentTemp borderC sairaFont" id="currTemp">67°</div>
+
           </div>
 
-          <img
-            class="leftImage borderC"
-            src="assets/rain-day.svg"
-            alt="rainday"
-          />
+          <!--<img class="rightImageA" src="assets/clearsky.svg" alt="weatherImage" />-->
+          <div class="pictureA borderC">
+          <img class = "img1eClass" id="img1a" alt = "weather Image" src="http://radar.weather.gov/ridge/Overlays/Topo/Short/DAX_Topo_Short.jpg">
+          <img class = "img2eClass" id="img2a" alt = "weather Image" src="http://radar.weather.gov/ridge/Overlays/Cities/Short/DAX_City_Short.gif">
+          <img class = "img3eClass" id="img3a" alt = "Weather Image" src="assets/rain-day.svg">
+          </div>
 
-          <div class="currentTemp borderC sairaFont">67°</div>
+
         </div>
+
+        <div class="uparrowDiv" id="upArrowID">
+          <img class="upArrow" src="assets/upArrow.svg" alt="arrow" onclick="myfunction()"/>
+        </div>
+
       </div>
 
-      <img class="rightImage" src="assets/clear-night.svg" alt="rainday" />
+
+      <!--<img class="rightImageB" src="assets/clearsky.svg" alt="weatherImage"/>-->
+      <div class="pictureB borderC">
+        <img class = "img1e" id="img1b" alt = "weather Image" src="http://radar.weather.gov/ridge/Overlays/Topo/Short/DAX_Topo_Short.jpg">
+        <img class = "img2e" id="img2b" alt = "weather Image" src="http://radar.weather.gov/ridge/Overlays/Cities/Short/DAX_City_Short.gif ">
+        <img class = "img3e" id="img3b" alt = "weather Image" src="assets/rain-day.svg">
+      </div>
+
     </div>
     <div class="bottomWhiteDiv borderC">
+      <img class="downArrow borderC" id="downArrowID" src="assets/downArrow.svg" alt="arrow" />
       <div class="oneOfFive borderC">
         <div class="time">1:00 pm</div>
-        <img class="bottomImages" src="assets/clear-night.svg" alt="rainday" />
+        <img class="bottomImages" id="icon0" src="assets/clear-night.svg" alt="weatherImage" />
         <div class="temperature">68°</div>
       </div>
 
       <div class="oneOfFive">
         <div class="time">1:00 pm</div>
-        <img class="bottomImages" src="assets/clear-night.svg" alt="rainday" />
+        <img class="bottomImages" id="icon1" src="assets/clear-night.svg" alt="weatherImage" />
         <div class="temperature">68°</div>
       </div>
 
       <div class="oneOfFive">
         <div class="time">1:00 pm</div>
-        <img class="bottomImages" src="assets/clear-night.svg" alt="rainday" />
+        <img class="bottomImages" id="icon2" src="assets/clear-night.svg" alt="weatherImage" />
         <div class="temperature">68°</div>
       </div>
 
       <div class="oneOfFive">
         <div class="time">1:00 pm</div>
-        <img class="bottomImages" src="assets/clear-night.svg" alt="rainday" />
+        <img class="bottomImages" id="icon3" src="assets/clear-night.svg" alt="weatherImage" />
         <div class="temperature">68°</div>
       </div>
 
-      <div class="oneOfFive">
+      <div class="oneOfFive" id="lastBox">
         <div class="time">1:00 pm</div>
-        <img class="bottomImages" src="assets/clear-night.svg" alt="rainday" />
+        <img class="bottomImages" id="icon4" src="assets/clear-night.svg" alt="weatherImage" />
         <div class="temperature">68°</div>
       </div>
     </div>
 
     <script src="weather.js"></script>
+
   </body>
 </html>

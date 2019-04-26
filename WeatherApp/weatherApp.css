@@ -1,7 +1,7 @@
 body{
   min-height: 100vh;
   display: flex;
-  background-color: pink;
+
   flex-direction: column;
 }
 
@@ -18,6 +18,8 @@ div.topGradientDiv{
 
 }
 
+
+
 div.bottomWhiteDiv{
   height: 40vh;
   background-color: white;
@@ -25,7 +27,7 @@ div.bottomWhiteDiv{
 }
 
 div.borderC{
-  /*border: 1px solid #000;*/
+/*  border: 1px solid #000;*/
 }
 
 div.gradientLeft{
@@ -82,6 +84,7 @@ div.forecastCap{
   text-align: center;
   padding: 10px 0px;
 
+
 }
 
 input[type=text] {
@@ -117,6 +120,7 @@ div.weatherRN-Box{
   flex-direction: row;
   align-items: center;
 
+
 }
 
 div.sairaFont{
@@ -142,7 +146,7 @@ img.leftImage{
   width: 10vw;
 }
 
-img.rightImage{
+img.rightImageB{
   width: 25vw;
   margin-right: 6vw;
 }
@@ -159,8 +163,6 @@ div.bottomWhiteDiv{
   justify-content: center;
   align-content: stretch;
 
-
-
 }
 
 div.oneOfFive{
@@ -169,8 +171,54 @@ div.oneOfFive{
   align-items: center;
   justify-content: space-around;
   flex: 1 1 auto;
+  border-right: 1px solid #000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+#lastBox{
+border-right: 0px solid #000;
+}
+
+img.img1e{
+position: absolute;
+top: 5vh;
+right: 10vh;
+clip-path: circle(40%);
+max-width: 400px;
+height: auto;
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
 
 }
+img.img2e{
+position: absolute;
+top: 5vh;
+right: 10vh;
+z-index: 1000;
+clip-path: circle(40%);
+max-width: 400px;
+height: auto;
+
+}
+img.img3e{
+position: absolute;
+top: 5vh;
+right: 10vh;
+z-index: 500;
+clip-path: circle(40%);
+max-width: 400px;
+height: auto;
+
+}
+
+div.picture{
+  width: 25vw;
+  margin-right: 6vw;
+}
+
+
 
 div.time{
     font-family: 'Saira Extra Condensed', sans-serif;
@@ -180,4 +228,301 @@ div.time{
 div.temperature{
   font-family: 'Saira Extra Condensed', sans-serif;
   font-size: 4em;
+}
+
+img.rightImageA{
+  display: none;
+}
+
+div.pictureA{
+  display: none;
+}
+
+div.leftPart{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+img.upArrow{
+  display: none;
+}
+
+img.downArrow{
+  display: none;
+}
+
+
+/*tablet View*/
+@media (max-width: 1000px) {
+
+  div.pictureB{
+    display: none;
+
+  }
+
+
+
+  img.img1eClass{
+  position: absolute;
+  top: 25vh;
+  right: 20vh;
+  clip-path: circle(40%);
+  max-width: 250px;
+  height: auto;
+  filter: grayscale(100%);
+
+  }
+  img.img2eClass{
+  position: absolute;
+  top: 25vh;
+  right: 20vh;
+  z-index: 1000;
+  clip-path: circle(40%);
+  max-width: 250px;
+  height: auto;
+
+  }
+  img.img3eClass{
+  position: absolute;
+  top: 25vh;
+  right: 20vh;
+  z-index: 500;
+  clip-path: circle(40%);
+  max-width: 250px;
+  height: auto;
+
+  }
+
+  div.pictureA{
+    display: flex;
+
+  }
+
+
+div.gradientLeft{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 25px;
+}
+
+
+img.rightImageB{
+  display: none;
+}
+
+#header{
+  text-align: center;
+}
+
+#subheader{
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 10px;
+}
+
+div.forecastBox{
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 10px;
+}
+
+div.weatherRN-Box{
+  margin: 0px;
+  margin-top: 10px;
+  padding: 0px;
+  justify-content: center;
+  margin-right: 35vw;
+
+}
+
+img.leftImage{
+  display: flex;
+  order: 1;
+  width: 18vw;
+  margin: 0px;
+  padding: 0px;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  margin-bottom: 15px;
+
+}
+
+img.rightImageA{
+  display: flex;
+  min-height: 100%;
+}
+
+div.currentTime{
+  display: flex;
+  order: 2;
+  margin: 0px;
+  padding: 0px;
+}
+
+div.currentTemp{
+  display: flex;
+  order: 3;
+}
+
+div.leftPart{
+  display: flex;
+  width: 250px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+div.currentTemp{
+  margin:0px;
+  margin-right: 20px;
+}
+div.currentTime{
+  margin: 0px;
+  margin-left: 20px;
+}
+}
+
+/*Phone View*/
+@media (max-width: 750px) {
+  div.pictureA{
+    display: none;
+
+  }
+
+
+div.currentTemp{
+  margin: 0px;
+}
+
+div.currentTime{
+  margin: 0px;
+}
+  div.topGradientDiv{
+
+    min-height: 100vh;
+    margin: 0px;
+
+  }
+
+  div.gradientLeft{
+    display: flex;
+    justify-content: space-around;
+    margin: 0px;
+  }
+
+  #header{
+    font-size: 3.2em;
+  }
+
+  #subheader{
+      font-size: 1.5em;
+  }
+
+#typeInBox{
+  min-width: 60vw;
+}
+
+#submitBox{
+  min-width: 20vw;
+}
+
+div.forecastCap{
+  padding: 0px;
+  margin: 0px;
+  margin-right: 200px;
+    font-size: 1.5em;
+}
+
+div.forecastBox{
+  display: flex;
+  flex-direction: row;
+
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  min-height: 80px;
+
+}
+
+
+img.rightImageA{
+  display: none;
+}
+
+img.leftImage{
+  min-width: 100%;
+  margin-bottom: 20px;
+}
+
+div.currentTemp{
+  font-size: 6em;
+}
+
+div.currentTime{
+  font-size: 3em;
+}
+
+img.upArrow{
+  display: flex;
+  width: 50px;
+  align-self: center;
+
+  color: white;
+  margin-bottom: 20px;
+}
+
+img.downArrow{
+  display: flex;
+  width: 50px;
+  align-self: center;
+  margin-top: 20px;
+
+}
+
+
+div.bottomWhiteDiv{
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0px;
+
+
+}
+
+
+
+div.oneOfFive{
+  flex-direction: row;
+  border-right: 0px solid #000;
+  border-bottom: 1px solid #000;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 5vh
+}
+
+#lastBox{
+  border-right: 0px solid #000;
+  border-bottom: 0px solid #000;
+}
+img.bottomImages{
+    width: 20vw;
+}
+
+div.time{
+  font-size: 2em;
+
+
+}
+div.uparrowDiv{
+  display: flex;
+  justify-content: center;
+
+}
+
+div.weatherRN-Box{
+  margin: 0px;
+}
 }
